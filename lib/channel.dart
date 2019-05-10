@@ -34,6 +34,12 @@ class TestingapiChannel extends ApplicationChannel {
         return Response.ok({"key": "value"});
       });
 
+    router
+        .route("/public")
+        .linkFunction((request) async {
+      return Response.ok('Hello world');
+    });
+
     return router;
   }
 }
